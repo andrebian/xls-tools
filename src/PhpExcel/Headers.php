@@ -27,7 +27,7 @@ class Headers
      * @return PHPExcel
      * @throws \PHPExcel_Exception
      */
-    public function setHeaders(array $headers, $sheetIndex = 1)
+    public function setHeaders(array $headers, $sheetIndex = 0)
     {
         $columnsHelper = new ColumnsHelper();
         $count = 0;
