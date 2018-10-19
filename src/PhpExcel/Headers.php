@@ -33,6 +33,7 @@ class Headers
         $count = 0;
         foreach ($headers as $header) {
             $letter = $columnsHelper->getNameFromNumber($count);
+            $headerContent = $header;
 
             if (is_array($header)
                 && isset($header['letter'])
@@ -41,9 +42,17 @@ class Headers
                 $letter = $header['letter'];
             }
 
+            if (is_array($headerContent)) {
+                if (isset($headerContent['name'])) {
+                    $headerContent = $headerContent['name'];
+                } else {
+                    $headerContent = current($headerContent);
+                }
+            }
+
             $this->phpExcel
                 ->setActiveSheetIndex($sheetIndex)
-                ->setCellValue($letter . '1', $header);
+                ->setCellValue($letter . '1', $headerContent);
 
             $count++;
         }
