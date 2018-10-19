@@ -1,0 +1,16 @@
+{
+  "name": "andrebian/xls-tools",
+  "description": "A set of tools for xls treatment",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Andrebian\\XlsTools\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Test\\Andrebian\\XlsTools": "test/"
+    }
+  }
+}
