@@ -3,6 +3,9 @@
   "description": "A set of tools for xls treatment",
   "type": "library",
   "license": "MIT",
+  "require": {
+    "phpoffice/phpexcel": "@stable"
+  },
   "autoload": {
     "psr-4": {
       "Andrebian\\XlsTools\\": "src/"
@@ -10,7 +13,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Test\\Andrebian\\XlsTools": "test/"
+      "Test\\Andrebian\\XlsTools\\": "test/"
     }
   }
 }
